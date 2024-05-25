@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d05pugvhl1igh"]
+[gd_scene load_steps=9 format=3 uid="uid://d05pugvhl1igh"]
 
 [ext_resource type="Texture2D" uid="uid://bspcwergi54yk" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_1_ground.png" id="1_am03r"]
 [ext_resource type="Texture2D" uid="uid://d2wpjskw7vdsn" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_2_stars.png" id="2_vcpgw"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cnsbwinhtkhuy" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_8_fg_buildings.png" id="8_goaay"]
 [ext_resource type="Texture2D" uid="uid://b0ug48w3hrx1d" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/grossi3.PNG" id="9_menyq"]
 [ext_resource type="Texture2D" uid="uid://b80wv1g47eskg" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_9_wall.png" id="9_qx8eh"]
-[ext_resource type="PackedScene" uid="uid://ug1ryecyx75e" path="res://scenes/character_body_2d.tscn" id="10_juiw4"]
 
 [node name="world" type="Node2D"]
 
@@ -617,9 +616,6 @@ texture = ExtResource("9_qx8eh")
 [node name="Layer9Wall12" type="Sprite2D" parent="."]
 position = Vector2(2847.48, 416)
 texture = ExtResource("9_qx8eh")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("10_juiw4")]
-position = Vector2(54, 550)
 
 [node name="Grossi3" type="Sprite2D" parent="."]
 position = Vector2(400, 488)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj61p83ded6tq"]
+
+[ext_resource type="PackedScene" uid="uid://d05pugvhl1igh" path="res://scenes/world.tscn" id="1_yngwx"]
+[ext_resource type="PackedScene" uid="uid://ug1ryecyx75e" path="res://scenes/character_body_2d.tscn" id="2_2a3ra"]
+[ext_resource type="PackedScene" uid="uid://rdiewg66ggjc" path="res://scenes/enemy/path_2d.tscn" id="3_3aulb"]
+[ext_resource type="PackedScene" uid="uid://chs4eymjbswru" path="res://scenes/enemy/enemy.tscn" id="4_1hngc"]
+
+[node name="game" type="Node2D"]
+
+[node name="world" parent="." instance=ExtResource("1_yngwx")]
+
+[node name="player" parent="." instance=ExtResource("2_2a3ra")]
+position = Vector2(417, 487)
+
+[node name="Path2D" parent="." instance=ExtResource("3_3aulb")]
+position = Vector2(649, 534)
+
+[node name="enemy" parent="Path2D" instance=ExtResource("4_1hngc")]
