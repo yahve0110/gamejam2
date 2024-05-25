@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://d2028oetgcdtr"]
+[gd_scene load_steps=53 format=3 uid="uid://d2028oetgcdtr"]
 
 [ext_resource type="Texture2D" uid="uid://cala2d641imr2" path="res://assets/Homeless_3/Homeless_2/Idle.png" id="1_7fpyu"]
 [ext_resource type="Script" path="res://scenes/enemy_2.gd" id="1_jl7rg"]
@@ -331,7 +331,15 @@ animations = [{
 radius = 17.0
 height = 70.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mqb8j"]
+radius = 87.367
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyhfo"]
+radius = 39.0513
+
 [node name="enemy2" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_jl7rg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -342,3 +350,28 @@ frame_progress = 0.5377
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_m2oji")
+
+[node name="detection_range" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_range"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_mqb8j")
+
+[node name="hitbox_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_area"]
+rotation = -1.0472
+shape = SubResource("CircleShape2D_gyhfo")
+
+[node name="take_dmg_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="detection_range" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="detection_range" to="." method="_on_detection_range_body_exited"]
+[connection signal="body_entered" from="hitbox_area" to="." method="_on_hitbox_area_body_entered"]
+[connection signal="body_exited" from="hitbox_area" to="." method="_on_hitbox_area_body_exited"]
+[connection signal="timeout" from="take_dmg_cooldown" to="." method="_on_take_dmg_cooldown_timeout"]

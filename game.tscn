@@ -1,31 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj61p83ded6tq"]
+[gd_scene load_steps=6 format=3 uid="uid://dj61p83ded6tq"]
 
 [ext_resource type="PackedScene" uid="uid://d05pugvhl1igh" path="res://scenes/world.tscn" id="1_yngwx"]
 [ext_resource type="PackedScene" uid="uid://ug1ryecyx75e" path="res://scenes/character_body_2d.tscn" id="2_2a3ra"]
-[ext_resource type="PackedScene" uid="uid://rdiewg66ggjc" path="res://scenes/enemy/path_2d.tscn" id="3_3aulb"]
-[ext_resource type="PackedScene" uid="uid://chs4eymjbswru" path="res://scenes/enemy/enemy.tscn" id="4_1hngc"]
-[ext_resource type="PackedScene" uid="uid://m3vxcptun27u" path="res://scenes/enemy1.tscn" id="5_jo4eu"]
-[ext_resource type="PackedScene" uid="uid://d2028oetgcdtr" path="res://scenes/enemy_2.tscn" id="6_xdavh"]
-[ext_resource type="PackedScene" uid="uid://dnetrd85vmt0e" path="res://scenes/enemy_3.tscn" id="7_t6ftp"]
+[ext_resource type="PackedScene" uid="uid://m3vxcptun27u" path="res://scenes/enemy1.tscn" id="3_b6pkw"]
+[ext_resource type="PackedScene" uid="uid://d2028oetgcdtr" path="res://scenes/enemy_2.tscn" id="4_ptejk"]
+[ext_resource type="PackedScene" uid="uid://dnetrd85vmt0e" path="res://scenes/enemy_3.tscn" id="5_7qsip"]
 
 [node name="game" type="Node2D"]
 
 [node name="world" parent="." instance=ExtResource("1_yngwx")]
 
 [node name="player" parent="." instance=ExtResource("2_2a3ra")]
-position = Vector2(417, 487)
+position = Vector2(237, 534)
 
-[node name="Path2D" parent="." instance=ExtResource("3_3aulb")]
-position = Vector2(649, 534)
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_b6pkw")]
+position = Vector2(392, 536)
 
-[node name="enemy" parent="Path2D" instance=ExtResource("4_1hngc")]
-position = Vector2(-11, -154)
+[node name="enemy2" parent="." instance=ExtResource("4_ptejk")]
+position = Vector2(620, 557)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("5_jo4eu")]
-position = Vector2(521, 519)
-
-[node name="enemy2" parent="." instance=ExtResource("6_xdavh")]
-position = Vector2(764, 576)
-
-[node name="enemy3" parent="." instance=ExtResource("7_t6ftp")]
-position = Vector2(1009, 544)
+[node name="enemy3" parent="." instance=ExtResource("5_7qsip")]
+position = Vector2(840, 564)

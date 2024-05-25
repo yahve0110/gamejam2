@@ -6,8 +6,7 @@ var health = 100
 var player_is_alive = true
 var attack_ip = false
 
-var speed = 100
-var jump_speed = 400  # Adjust as needed
+var speed = 120
 var current_dir = "none"
 
 func _ready():
@@ -108,21 +107,32 @@ func _on_attack_cooldown_timeout():
 func attack():
 	var dir = current_dir
 	if Input.is_action_just_pressed("attack"):
+		Global.player_current_attack = true
 		attack_ip = true
 		velocity = Vector2.ZERO  # Stop movement when attacking
 		if dir == "right":
 			$AnimatedSprite2D.flip_h = false
 			$AnimatedSprite2D.play("attack1")
+			$deal_attack_cooldown.start()
 		elif dir == "left":
 			$AnimatedSprite2D.flip_h = true
 			$AnimatedSprite2D.play("attack2")
+			$deal_attack_cooldown.start()
 		elif dir == "down":
 			$AnimatedSprite2D.play("attack3")
+			$deal_attack_cooldown.start()
 		elif dir == "up":
 			$AnimatedSprite2D.play("attack1")
+			$deal_attack_cooldown.start()
 		
-		$deal_attack_timer.start()  # Start the timer for dealing the attack
+		$attack_cooldown.start()  # Start the timer for dealing the attack
 
 func _on_deal_attack_timer_timeout():
-	$deal_attack_timer.stop()
+	$attack_cooldown.stop()
+	attack_ip = false
+
+
+func _on_deal_attack_cooldown_timeout():
+	$deal_attack_cooldown.stop()
+	Global.player_current_attack = false
 	attack_ip = false

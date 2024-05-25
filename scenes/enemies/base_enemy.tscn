@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b01504e4fl8p0"]
+
+[ext_resource type="Script" path="res://scenes/enemies/base_enemy.gd" id="1_flq4d"]
+
+[node name="BaseEnemy" type="CharacterBody2D"]
+script = ExtResource("1_flq4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="detection_range" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_range"]
+position = Vector2(0, -1)
+
+[node name="hitbox_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_area"]
+rotation = -1.0472
+
+[node name="take_dmg_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="detection_range" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="detection_range" to="." method="_on_detection_range_body_exited"]
+[connection signal="body_entered" from="hitbox_area" to="." method="_on_hitbox_area_body_entered"]
+[connection signal="body_exited" from="hitbox_area" to="." method="_on_hitbox_area_body_exited"]
+[connection signal="timeout" from="take_dmg_cooldown" to="." method="_on_take_dmg_cooldown_timeout"]

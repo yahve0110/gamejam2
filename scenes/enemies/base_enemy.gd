@@ -32,11 +32,6 @@ func enemy():
 	pass
 
 
-func _on_detection_area_body_entered(body):
-	player = body
-	player_chase = true
-
-
 func deal_with_damage():
 	if player_inattack_zone and Global.player_current_attack == true:
 		if can_take_damage:

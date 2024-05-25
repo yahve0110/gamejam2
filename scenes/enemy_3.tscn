@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dnetrd85vmt0e"]
+[gd_scene load_steps=55 format=3 uid="uid://dnetrd85vmt0e"]
 
 [ext_resource type="Texture2D" uid="uid://doegeg6r5bubi" path="res://assets/Homeless_3/Attack_1.png" id="1_fms85"]
 [ext_resource type="Script" path="res://scenes/enemy_3.gd" id="1_r3ssf"]
@@ -345,6 +345,12 @@ animations = [{
 radius = 16.0
 height = 76.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3bybw"]
+radius = 87.367
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_exm8h"]
+radius = 44.3847
+
 [node name="enemy3" type="CharacterBody2D"]
 script = ExtResource("1_r3ssf")
 
@@ -356,3 +362,28 @@ frame_progress = 0.305758
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 26)
 shape = SubResource("CapsuleShape2D_achwj")
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(0, 29)
+shape = SubResource("CircleShape2D_3bybw")
+
+[node name="hitbox_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_area"]
+position = Vector2(-5, 25)
+shape = SubResource("CircleShape2D_exm8h")
+
+[node name="take_dmg_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="hitbox_area" to="." method="_on_hitbox_area_body_entered"]
+[connection signal="body_exited" from="hitbox_area" to="." method="_on_hitbox_area_body_exited"]
+[connection signal="timeout" from="take_dmg_cooldown" to="." method="_on_take_dmg_cooldown_timeout"]
