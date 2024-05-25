@@ -16,6 +16,7 @@ func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
 	attack()
+	update_health()
 
 	if health <= 0:
 		player_is_alive = false
@@ -136,3 +137,15 @@ func _on_deal_attack_cooldown_timeout():
 	$deal_attack_cooldown.stop()
 	Global.player_current_attack = false
 	attack_ip = false
+
+
+func update_health():
+	var healthbar = $health_bar
+	healthbar.value = health
+	
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
+
+
