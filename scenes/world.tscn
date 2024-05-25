@@ -1,0 +1,627 @@
+[gd_scene load_steps=10 format=3 uid="uid://d05pugvhl1igh"]
+
+[ext_resource type="Texture2D" uid="uid://bspcwergi54yk" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_1_ground.png" id="1_am03r"]
+[ext_resource type="Texture2D" uid="uid://d2wpjskw7vdsn" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_2_stars.png" id="2_vcpgw"]
+[ext_resource type="Texture2D" uid="uid://oetoim0bkig" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_4_clouds_1.png" id="4_t1hhf"]
+[ext_resource type="Texture2D" uid="uid://dmqhhb8po8n0y" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_6_far_buildings.png" id="6_p1rvw"]
+[ext_resource type="Texture2D" uid="uid://47pkhdb7hipt" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_7_bg_buildings.png" id="7_semcf"]
+[ext_resource type="Texture2D" uid="uid://cnsbwinhtkhuy" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_8_fg_buildings.png" id="8_goaay"]
+[ext_resource type="Texture2D" uid="uid://b0ug48w3hrx1d" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/grossi3.PNG" id="9_menyq"]
+[ext_resource type="Texture2D" uid="uid://b80wv1g47eskg" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_9_wall.png" id="9_qx8eh"]
+[ext_resource type="PackedScene" uid="uid://ug1ryecyx75e" path="res://scenes/character_body_2d.tscn" id="10_juiw4"]
+
+[node name="world" type="Node2D"]
+
+[node name="Layer1Ground" type="Sprite2D" parent="."]
+position = Vector2(582.06, 442.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground5" type="Sprite2D" parent="."]
+position = Vector2(586, 442)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground6" type="Sprite2D" parent="."]
+position = Vector2(583, 471)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground2" type="Sprite2D" parent="."]
+position = Vector2(585, 402)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground3" type="Sprite2D" parent="."]
+position = Vector2(584, 359)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground4" type="Sprite2D" parent="."]
+position = Vector2(583.803, 282.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars" type="Sprite2D" parent="."]
+position = Vector2(347, 332)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds1" type="Sprite2D" parent="."]
+position = Vector2(354, 375)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds2" type="Sprite2D" parent="."]
+position = Vector2(764, 396)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds4" type="Sprite2D" parent="."]
+position = Vector2(383, 350)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds5" type="Sprite2D" parent="."]
+position = Vector2(827, 370)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds3" type="Sprite2D" parent="."]
+position = Vector2(821, 352)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings" type="Sprite2D" parent="."]
+position = Vector2(346, 419)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings4" type="Sprite2D" parent="."]
+position = Vector2(950, 405)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings2" type="Sprite2D" parent="."]
+position = Vector2(913, 421)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings" type="Sprite2D" parent="."]
+position = Vector2(349, 423)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings2" type="Sprite2D" parent="."]
+position = Vector2(922, 427)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings3" type="Sprite2D" parent="."]
+position = Vector2(391, 356)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings" type="Sprite2D" parent="."]
+position = Vector2(256, 440)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings2" type="Sprite2D" parent="."]
+position = Vector2(843, 441)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall" type="Sprite2D" parent="."]
+position = Vector2(355, 414)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall2" type="Sprite2D" parent="."]
+position = Vector2(817, 416)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer1Ground7" type="Sprite2D" parent="."]
+position = Vector2(582.06, 442.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground8" type="Sprite2D" parent="."]
+position = Vector2(586, 442)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground9" type="Sprite2D" parent="."]
+position = Vector2(583, 471)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground10" type="Sprite2D" parent="."]
+position = Vector2(585, 402)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground11" type="Sprite2D" parent="."]
+position = Vector2(584, 359)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground12" type="Sprite2D" parent="."]
+position = Vector2(583.803, 282.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars2" type="Sprite2D" parent="."]
+position = Vector2(347, 332)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds6" type="Sprite2D" parent="."]
+position = Vector2(354, 375)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds7" type="Sprite2D" parent="."]
+position = Vector2(764, 396)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds8" type="Sprite2D" parent="."]
+position = Vector2(383, 350)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds9" type="Sprite2D" parent="."]
+position = Vector2(827, 370)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds10" type="Sprite2D" parent="."]
+position = Vector2(821, 352)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings3" type="Sprite2D" parent="."]
+position = Vector2(346, 419)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings5" type="Sprite2D" parent="."]
+position = Vector2(950, 405)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings6" type="Sprite2D" parent="."]
+position = Vector2(913, 421)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings4" type="Sprite2D" parent="."]
+position = Vector2(349, 423)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings5" type="Sprite2D" parent="."]
+position = Vector2(922, 427)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings6" type="Sprite2D" parent="."]
+position = Vector2(391, 356)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings3" type="Sprite2D" parent="."]
+position = Vector2(256, 440)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings4" type="Sprite2D" parent="."]
+position = Vector2(843, 441)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall3" type="Sprite2D" parent="."]
+position = Vector2(355, 414)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall4" type="Sprite2D" parent="."]
+position = Vector2(817, 416)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer1Ground13" type="Sprite2D" parent="."]
+position = Vector2(1661.54, 443.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground14" type="Sprite2D" parent="."]
+position = Vector2(1665.48, 443)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground15" type="Sprite2D" parent="."]
+position = Vector2(1662.48, 472)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground16" type="Sprite2D" parent="."]
+position = Vector2(1664.48, 403)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground17" type="Sprite2D" parent="."]
+position = Vector2(1663.48, 360)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground18" type="Sprite2D" parent="."]
+position = Vector2(1663.29, 283.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars3" type="Sprite2D" parent="."]
+position = Vector2(1426.48, 333)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds11" type="Sprite2D" parent="."]
+position = Vector2(1433.48, 376)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds12" type="Sprite2D" parent="."]
+position = Vector2(1843.48, 397)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds13" type="Sprite2D" parent="."]
+position = Vector2(1462.48, 351)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds14" type="Sprite2D" parent="."]
+position = Vector2(1906.48, 371)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds15" type="Sprite2D" parent="."]
+position = Vector2(1900.48, 353)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings7" type="Sprite2D" parent="."]
+position = Vector2(1425.48, 420)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings8" type="Sprite2D" parent="."]
+position = Vector2(2029.48, 406)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings9" type="Sprite2D" parent="."]
+position = Vector2(1992.48, 422)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings7" type="Sprite2D" parent="."]
+position = Vector2(1428.48, 424)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings8" type="Sprite2D" parent="."]
+position = Vector2(2001.48, 428)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings9" type="Sprite2D" parent="."]
+position = Vector2(1470.48, 357)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings5" type="Sprite2D" parent="."]
+position = Vector2(1335.48, 441)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings6" type="Sprite2D" parent="."]
+position = Vector2(1922.48, 442)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall5" type="Sprite2D" parent="."]
+position = Vector2(1434.48, 415)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall6" type="Sprite2D" parent="."]
+position = Vector2(1896.48, 417)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer1Ground19" type="Sprite2D" parent="."]
+position = Vector2(1661.54, 443.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground20" type="Sprite2D" parent="."]
+position = Vector2(1665.48, 443)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground21" type="Sprite2D" parent="."]
+position = Vector2(1662.48, 472)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground22" type="Sprite2D" parent="."]
+position = Vector2(1664.48, 403)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground23" type="Sprite2D" parent="."]
+position = Vector2(1663.48, 360)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground24" type="Sprite2D" parent="."]
+position = Vector2(1663.29, 283.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars4" type="Sprite2D" parent="."]
+position = Vector2(1426.48, 333)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds16" type="Sprite2D" parent="."]
+position = Vector2(1433.48, 376)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds17" type="Sprite2D" parent="."]
+position = Vector2(1843.48, 397)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds18" type="Sprite2D" parent="."]
+position = Vector2(1462.48, 351)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds19" type="Sprite2D" parent="."]
+position = Vector2(1906.48, 371)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds20" type="Sprite2D" parent="."]
+position = Vector2(1900.48, 353)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings10" type="Sprite2D" parent="."]
+position = Vector2(1425.48, 420)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings11" type="Sprite2D" parent="."]
+position = Vector2(2029.48, 406)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings12" type="Sprite2D" parent="."]
+position = Vector2(1992.48, 422)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings10" type="Sprite2D" parent="."]
+position = Vector2(1428.48, 424)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings11" type="Sprite2D" parent="."]
+position = Vector2(2001.48, 428)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings12" type="Sprite2D" parent="."]
+position = Vector2(1470.48, 357)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings7" type="Sprite2D" parent="."]
+position = Vector2(1335.48, 441)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings8" type="Sprite2D" parent="."]
+position = Vector2(1922.48, 442)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall7" type="Sprite2D" parent="."]
+position = Vector2(1434.48, 415)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall8" type="Sprite2D" parent="."]
+position = Vector2(1896.48, 417)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer1Ground25" type="Sprite2D" parent="."]
+position = Vector2(2612.54, 442.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground26" type="Sprite2D" parent="."]
+position = Vector2(2616.48, 442)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground27" type="Sprite2D" parent="."]
+position = Vector2(2613.48, 471)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground28" type="Sprite2D" parent="."]
+position = Vector2(2615.48, 402)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground29" type="Sprite2D" parent="."]
+position = Vector2(2614.48, 359)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground30" type="Sprite2D" parent="."]
+position = Vector2(2614.29, 282.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars5" type="Sprite2D" parent="."]
+position = Vector2(2377.48, 332)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds21" type="Sprite2D" parent="."]
+position = Vector2(2384.48, 375)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds22" type="Sprite2D" parent="."]
+position = Vector2(2794.48, 396)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds23" type="Sprite2D" parent="."]
+position = Vector2(2413.48, 350)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds24" type="Sprite2D" parent="."]
+position = Vector2(2857.48, 370)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds25" type="Sprite2D" parent="."]
+position = Vector2(2851.48, 352)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings13" type="Sprite2D" parent="."]
+position = Vector2(2376.48, 419)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings14" type="Sprite2D" parent="."]
+position = Vector2(2980.48, 405)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings15" type="Sprite2D" parent="."]
+position = Vector2(2943.48, 421)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings13" type="Sprite2D" parent="."]
+position = Vector2(2379.48, 423)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings14" type="Sprite2D" parent="."]
+position = Vector2(2952.48, 427)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings15" type="Sprite2D" parent="."]
+position = Vector2(2421.48, 356)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings9" type="Sprite2D" parent="."]
+position = Vector2(2286.48, 440)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings10" type="Sprite2D" parent="."]
+position = Vector2(2873.48, 441)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall9" type="Sprite2D" parent="."]
+position = Vector2(2385.48, 414)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall10" type="Sprite2D" parent="."]
+position = Vector2(2847.48, 416)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer1Ground31" type="Sprite2D" parent="."]
+position = Vector2(2612.54, 442.5)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground32" type="Sprite2D" parent="."]
+position = Vector2(2616.48, 442)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground33" type="Sprite2D" parent="."]
+position = Vector2(2613.48, 471)
+scale = Vector2(1.62891, 1.62891)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground34" type="Sprite2D" parent="."]
+position = Vector2(2615.48, 402)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground35" type="Sprite2D" parent="."]
+position = Vector2(2614.48, 359)
+scale = Vector2(1.60938, 1.60938)
+texture = ExtResource("1_am03r")
+
+[node name="Layer1Ground36" type="Sprite2D" parent="."]
+position = Vector2(2614.29, 282.452)
+scale = Vector2(1.62157, 1.65978)
+texture = ExtResource("1_am03r")
+
+[node name="Layer2Stars6" type="Sprite2D" parent="."]
+position = Vector2(2377.48, 332)
+texture = ExtResource("2_vcpgw")
+
+[node name="Layer4Clouds26" type="Sprite2D" parent="."]
+position = Vector2(2384.48, 375)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds27" type="Sprite2D" parent="."]
+position = Vector2(2794.48, 396)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds28" type="Sprite2D" parent="."]
+position = Vector2(2413.48, 350)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds29" type="Sprite2D" parent="."]
+position = Vector2(2857.48, 370)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer4Clouds30" type="Sprite2D" parent="."]
+position = Vector2(2851.48, 352)
+texture = ExtResource("4_t1hhf")
+
+[node name="Layer6FarBuildings16" type="Sprite2D" parent="."]
+position = Vector2(2376.48, 419)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings17" type="Sprite2D" parent="."]
+position = Vector2(2980.48, 405)
+scale = Vector2(0.652344, 0.652344)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer6FarBuildings18" type="Sprite2D" parent="."]
+position = Vector2(2943.48, 421)
+scale = Vector2(0.654564, 0.654564)
+texture = ExtResource("6_p1rvw")
+
+[node name="Layer7BgBuildings16" type="Sprite2D" parent="."]
+position = Vector2(2379.48, 423)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings17" type="Sprite2D" parent="."]
+position = Vector2(2952.48, 427)
+scale = Vector2(0.737793, 0.737793)
+texture = ExtResource("7_semcf")
+
+[node name="Layer7BgBuildings18" type="Sprite2D" parent="."]
+position = Vector2(2421.48, 356)
+texture = ExtResource("7_semcf")
+
+[node name="Layer8FgBuildings11" type="Sprite2D" parent="."]
+position = Vector2(2286.48, 440)
+scale = Vector2(0.800781, 0.800781)
+texture = ExtResource("8_goaay")
+
+[node name="Layer8FgBuildings12" type="Sprite2D" parent="."]
+position = Vector2(2873.48, 441)
+scale = Vector2(0.787088, 0.787088)
+texture = ExtResource("8_goaay")
+
+[node name="Layer9Wall11" type="Sprite2D" parent="."]
+position = Vector2(2385.48, 414)
+scale = Vector2(1.00899, 1.00899)
+texture = ExtResource("9_qx8eh")
+
+[node name="Layer9Wall12" type="Sprite2D" parent="."]
+position = Vector2(2847.48, 416)
+texture = ExtResource("9_qx8eh")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_juiw4")]
+position = Vector2(54, 550)
+
+[node name="Grossi3" type="Sprite2D" parent="."]
+position = Vector2(400, 488)
+scale = Vector2(0.115234, 0.115234)
+texture = ExtResource("9_menyq")
