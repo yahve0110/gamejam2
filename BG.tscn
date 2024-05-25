@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://2a7riew56gv2"]
+
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_5jh5f"]
+[ext_resource type="Texture2D" uid="uid://bspcwergi54yk" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_1_ground.png" id="2_l5hjb"]
+[ext_resource type="Texture2D" uid="uid://d2wpjskw7vdsn" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_2_stars.png" id="3_0nqig"]
+[ext_resource type="Texture2D" uid="uid://daytwcpdtp75d" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_3_moon.png" id="4_3ttab"]
+[ext_resource type="Texture2D" uid="uid://oetoim0bkig" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_4_clouds_1.png" id="5_t761j"]
+[ext_resource type="Texture2D" uid="uid://dmqhhb8po8n0y" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_6_far_buildings.png" id="6_c7sjy"]
+[ext_resource type="Texture2D" uid="uid://47pkhdb7hipt" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_7_bg_buildings.png" id="7_f0fp4"]
+[ext_resource type="Texture2D" uid="uid://cnsbwinhtkhuy" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_8_fg_buildings.png" id="8_oddqk"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_5jh5f")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer1Ground" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(360, 128)
+texture = ExtResource("2_l5hjb")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer2Stars" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(360, 128)
+texture = ExtResource("3_0nqig")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer3Moon" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(360, 128)
+texture = ExtResource("4_3ttab")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer4Clouds1" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(360, 128)
+texture = ExtResource("5_t761j")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer6FarBuildings" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(360, 128)
+texture = ExtResource("6_c7sjy")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer7BgBuildings" type="Sprite2D" parent="ParallaxLayer6"]
+position = Vector2(360, 128)
+texture = ExtResource("7_f0fp4")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(723, 0)
+
+[node name="Layer8FgBuildings" type="Sprite2D" parent="ParallaxLayer7"]
+position = Vector2(360, 128)
+texture = ExtResource("8_oddqk")
+metadata/_edit_lock_ = true
