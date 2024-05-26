@@ -19,7 +19,7 @@ position = Vector2(5, -70)
 script = ExtResource("2_fq35m")
 
 [node name="player" parent="world" instance=ExtResource("2_2a3ra")]
-position = Vector2(166, 544)
+position = Vector2(215, 548)
 collision_mask = 5
 
 [node name="enemy2" parent="world" instance=ExtResource("4_ptejk")]
@@ -50,7 +50,7 @@ rotation = -0.0310047
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world/lvl2_entrance"]
-position = Vector2(-108.205, 230.757)
+position = Vector2(6821.42, 801.848)
 shape = SubResource("RectangleShape2D_uvtoy")
 
 [node name="CharacterBody2D" parent="world" instance=ExtResource("3_b6pkw")]
@@ -67,6 +67,14 @@ position = Vector2(1683, 539)
 
 [node name="enemy3" parent="." instance=ExtResource("4_ptejk")]
 position = Vector2(5115, 555)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-13, 422)
+collision_mask = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-2, 1)
+polygon = PackedVector2Array(-4, -2, 563, -12, 3412, -11, 5100, -15, 6887, -19, 6887, 178, 6750, 178, 2763, 189, -2, 176, -11, 24, -85, 54, -87, 207, 901, 273, 1663, 261, 3012, 259, 4325, 256, 5612, 251, 6858, 284, 7085, 357, 7151, -186, 6476, -67, 5464, -158, 3789, -139, 2171, -124, 580, -138, -18, -118, -72, -42, 5, 34)
 
 [connection signal="body_entered" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_entered"]
 [connection signal="body_exited" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_exited"]
