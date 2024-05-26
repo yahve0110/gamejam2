@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bim4dshfyaeeh"]
+
+[node name="starttext" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 146.0
+offset_top = 156.0
+offset_right = 598.0
+offset_bottom = 276.0
+text = "Friday evening. You don't fit in here. 
+The place feels hostile. If you want to survive this night 
+you need magic potion from Grossi.
+Get to the nearest  market. Hurry, and be careful."

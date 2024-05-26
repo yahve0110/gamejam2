@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://by75vci5jfqn2"]
+
+[node name="conrols" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 90.0
+offset_top = 55.0
+offset_right = 408.0
+offset_bottom = 173.0
+text = "Controls:
+movement: arrows
+attack: e
+quit: esc"

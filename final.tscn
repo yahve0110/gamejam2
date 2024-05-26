@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dfu58hmhleh17"]
+
+[node name="final" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 245.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 20
+text = "LVL 1 finished
+
+Thank you for attention
+
+Authors
+Egor Kisseljov
+Arnis Zindix
+Nikita Baranov
+Alexandra Kisseljova
+Ilya Skorokhodov"

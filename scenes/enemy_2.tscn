@@ -323,7 +323,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_i7ej3")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"walk",
 "speed": 7.0
 }]
 
@@ -345,8 +345,7 @@ script = ExtResource("1_jl7rg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -32)
 sprite_frames = SubResource("SpriteFrames_mciaq")
-animation = &"attack1"
-frame_progress = 0.502839
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_m2oji")

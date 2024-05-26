@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cr6o5ara85coy"]
+
+[node name="endtext" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 430.0
+offset_bottom = 89.0
+text = "Congratulations, you are now safe. 
+Make sure you have some potion left for the morning.
+"

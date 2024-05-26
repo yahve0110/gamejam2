@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxnfgqxdl71w5"
-path="res://.godot/imported/grossi2.png-ee34218c9a13b7a9dc6bd9d0cad28e63.ctex"
+uid="uid://bif3fm3u3tx4v"
+path="res://.godot/imported/shopgross1.PNG-024aa92bbfe5939ef4fcdc0d38b8c798.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/grossi2.png"
-dest_files=["res://.godot/imported/grossi2.png-ee34218c9a13b7a9dc6bd9d0cad28e63.ctex"]
+source_file="res://shopgross1.PNG"
+dest_files=["res://.godot/imported/shopgross1.PNG-024aa92bbfe5939ef4fcdc0d38b8c798.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d05pugvhl1igh"]
+[gd_scene load_steps=19 format=3 uid="uid://d05pugvhl1igh"]
 
 [ext_resource type="Texture2D" uid="uid://bspcwergi54yk" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_1_ground.png" id="1_am03r"]
 [ext_resource type="Texture2D" uid="uid://d2wpjskw7vdsn" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_2_stars.png" id="2_vwdyc"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://4gye5ukx4xai" path="res://assets/post_soviet_city_parallax/Tree_1_256b.png" id="12_t5o6f"]
 [ext_resource type="Texture2D" uid="uid://dre4pxp6qah3d" path="res://assets/post_soviet_city_parallax/Tree_2_256b.png" id="13_njamn"]
 [ext_resource type="Texture2D" uid="uid://b3jai7dmyvduj" path="res://assets/post_soviet_city_parallax/fonar.png" id="14_jy64h"]
+[ext_resource type="PackedScene" uid="uid://bim4dshfyaeeh" path="res://textbox.tscn" id="15_w7nmm"]
+[ext_resource type="PackedScene" uid="uid://by75vci5jfqn2" path="res://scenes/conrols.tscn" id="16_cdcvo"]
+[ext_resource type="PackedScene" uid="uid://cr6o5ara85coy" path="res://scenes/endtest.tscn" id="17_b2y83"]
+[ext_resource type="Texture2D" uid="uid://dg4bdipm8pruf" path="res://scenes/shopgross1.PNG" id="18_031rw"]
 
 [node name="world" type="Node2D"]
 
@@ -458,7 +462,7 @@ scale = Vector2(0.104199, 0.108887)
 texture = ExtResource("9_diitb")
 
 [node name="Grossi3" type="Sprite2D" parent="ParallaxBackground/details"]
-position = Vector2(6591, 452)
+position = Vector2(6113, 456)
 scale = Vector2(0.104493, 0.104493)
 texture = ExtResource("10_nx101")
 
@@ -547,3 +551,17 @@ texture = ExtResource("14_jy64h")
 position = Vector2(6223, 517)
 scale = Vector2(0.376563, 0.353472)
 texture = ExtResource("14_jy64h")
+
+[node name="Shopgross1" type="Sprite2D" parent="ParallaxBackground/details"]
+position = Vector2(6597, 415)
+scale = Vector2(0.3875, 0.3875)
+texture = ExtResource("18_031rw")
+
+[node name="text" parent="." instance=ExtResource("15_w7nmm")]
+position = Vector2(251, 107)
+
+[node name="conrols" parent="." instance=ExtResource("16_cdcvo")]
+position = Vector2(-50, 210)
+
+[node name="endtext" parent="." instance=ExtResource("17_b2y83")]
+position = Vector2(6418, 260)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dj61p83ded6tq"]
+[gd_scene load_steps=10 format=3 uid="uid://dj61p83ded6tq"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_t2j1n"]
 [ext_resource type="PackedScene" uid="uid://d05pugvhl1igh" path="res://scenes/world.tscn" id="1_yngwx"]
@@ -7,9 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://m3vxcptun27u" path="res://scenes/enemy1.tscn" id="3_b6pkw"]
 [ext_resource type="PackedScene" uid="uid://d2028oetgcdtr" path="res://scenes/enemy_2.tscn" id="4_ptejk"]
 [ext_resource type="PackedScene" uid="uid://dnetrd85vmt0e" path="res://scenes/enemy_3.tscn" id="5_7qsip"]
+[ext_resource type="AudioStream" uid="uid://iqabp62r5gpw" path="res://audio/project.mp3" id="8_mi7jv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvtoy"]
-size = Vector2(61, 135)
+size = Vector2(69.7783, 46.0367)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_t2j1n")
@@ -23,7 +24,7 @@ position = Vector2(215, 548)
 collision_mask = 5
 
 [node name="enemy2" parent="world" instance=ExtResource("4_ptejk")]
-position = Vector2(2038, 605)
+position = Vector2(2449, 610)
 
 [node name="enemy5" parent="world" instance=ExtResource("4_ptejk")]
 position = Vector2(2867, 608)
@@ -50,11 +51,11 @@ rotation = -0.0310047
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world/lvl2_entrance"]
-position = Vector2(6821.42, 801.848)
+position = Vector2(6631.25, 739.923)
 shape = SubResource("RectangleShape2D_uvtoy")
 
 [node name="CharacterBody2D" parent="world" instance=ExtResource("3_b6pkw")]
-position = Vector2(1286, 568)
+position = Vector2(1497, 576)
 
 [node name="CharacterBody2D2" parent="world" instance=ExtResource("3_b6pkw")]
 position = Vector2(4535, 590)
@@ -63,7 +64,7 @@ position = Vector2(4535, 590)
 position = Vector2(5905, 579)
 
 [node name="enemy2" parent="." instance=ExtResource("4_ptejk")]
-position = Vector2(1683, 539)
+position = Vector2(2001, 528)
 
 [node name="enemy3" parent="." instance=ExtResource("4_ptejk")]
 position = Vector2(5115, 555)
@@ -76,5 +77,9 @@ collision_mask = 6
 position = Vector2(-2, 1)
 polygon = PackedVector2Array(-4, -2, 563, -12, 3412, -11, 5100, -15, 6887, -19, 6887, 178, 6750, 178, 2763, 189, -2, 176, -11, 24, -85, 54, -87, 207, 901, 273, 1663, 261, 3012, 259, 4325, 256, 5612, 251, 6858, 284, 7085, 357, 7151, -186, 6476, -67, 5464, -158, 3789, -139, 2171, -124, 580, -138, -18, -118, -72, -42, 5, 34)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_mi7jv")
+
 [connection signal="body_entered" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_entered"]
 [connection signal="body_exited" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
