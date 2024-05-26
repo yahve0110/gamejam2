@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://daun3heu68l2g"]
+
+[ext_resource type="Texture2D" uid="uid://b80wv1g47eskg" path="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/layer_9_wall.png" id="1_gtbsc"]
+[ext_resource type="Script" path="res://Menu.gd" id="1_pl0h5"]
+[ext_resource type="PackedScene" uid="uid://2a7riew56gv2" path="res://BG.tscn" id="3_pkf78"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_pl0h5")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_pkf78")]
+
+[node name="Layer9Wall" type="Sprite2D" parent="."]
+position = Vector2(356, 148)
+texture = ExtResource("1_gtbsc")
+
+[node name="Layer9Wall2" type="Sprite2D" parent="."]
+position = Vector2(1079, 148)
+texture = ExtResource("1_gtbsc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 1100
+limit_bottom = 220
+
+[node name="Play" type="Button" parent="."]
+offset_left = 159.0
+offset_top = 101.0
+offset_right = 282.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 20
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 157.0
+offset_top = 155.0
+offset_right = 280.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

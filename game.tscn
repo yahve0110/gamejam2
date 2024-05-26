@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dj61p83ded6tq"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_t2j1n"]
+[ext_resource type="PackedScene" uid="uid://d05pugvhl1igh" path="res://scenes/world.tscn" id="1_yngwx"]
+[ext_resource type="PackedScene" uid="uid://ug1ryecyx75e" path="res://scenes/character_body_2d.tscn" id="2_2a3ra"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="2_fq35m"]
+[ext_resource type="PackedScene" uid="uid://m3vxcptun27u" path="res://scenes/enemy1.tscn" id="3_b6pkw"]
+[ext_resource type="PackedScene" uid="uid://d2028oetgcdtr" path="res://scenes/enemy_2.tscn" id="4_ptejk"]
+[ext_resource type="PackedScene" uid="uid://dnetrd85vmt0e" path="res://scenes/enemy_3.tscn" id="5_7qsip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvtoy"]
+size = Vector2(61, 135)
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_t2j1n")
+
+[node name="world" parent="." instance=ExtResource("1_yngwx")]
+position = Vector2(5, -70)
+script = ExtResource("2_fq35m")
+
+[node name="player" parent="world" instance=ExtResource("2_2a3ra")]
+position = Vector2(166, 544)
+collision_mask = 5
+
+[node name="enemy2" parent="world" instance=ExtResource("4_ptejk")]
+position = Vector2(549, 567)
+
+[node name="enemy3" parent="world" instance=ExtResource("5_7qsip")]
+position = Vector2(769, 574)
+
+[node name="collision" type="StaticBody2D" parent="world"]
+position = Vector2(-5, 70)
+collision_mask = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/collision"]
+position = Vector2(0, 447)
+polygon = PackedVector2Array(21, -55, 408, -54, 1169, -60, 1160, 165, 615, 164, -1, 162, -9, -17, -51, 36, -41, 184, 590, 191, 1116, 188, 1218, 185, 1262, -76, 1116, -111, 780, -96, 181, -97, -18, -85, -1, -1)
+
+[node name="lvl2_entrance" type="Area2D" parent="world"]
+position = Vector2(-78, 0)
+rotation = -0.0310047
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/lvl2_entrance"]
+position = Vector2(1116.5, 594.5)
+shape = SubResource("RectangleShape2D_uvtoy")
+
+[node name="CharacterBody2D" parent="world" instance=ExtResource("3_b6pkw")]
+position = Vector2(320, 552)
+
+[node name="enemy2" parent="." instance=ExtResource("4_ptejk")]
+position = Vector2(949, 472)
+
+[connection signal="body_entered" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_entered"]
+[connection signal="body_exited" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_exited"]
