@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbquk1rch65ru"
-path="res://.godot/imported/narvacastle.PNG-1d30bc373b1f108ed99464355c469911.ctex"
+uid="uid://bbglk2pfea4et"
+path="res://.godot/imported/narvacastle.PNG-e9f52d86511f96638a246040a4eec819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/post_soviet_city_parallax/narvacastle.PNG"
-dest_files=["res://.godot/imported/narvacastle.PNG-1d30bc373b1f108ed99464355c469911.ctex"]
+source_file="res://assets/post_soviet_city_parallax/post_soviet_city_parallax/narvacastle.PNG"
+dest_files=["res://.godot/imported/narvacastle.PNG-e9f52d86511f96638a246040a4eec819.ctex"]
 
 [params]
 
