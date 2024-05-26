@@ -23,10 +23,22 @@ position = Vector2(166, 544)
 collision_mask = 5
 
 [node name="enemy2" parent="world" instance=ExtResource("4_ptejk")]
-position = Vector2(-89, 670)
+position = Vector2(2038, 605)
+
+[node name="enemy5" parent="world" instance=ExtResource("4_ptejk")]
+position = Vector2(2867, 608)
+
+[node name="enemy6" parent="world" instance=ExtResource("4_ptejk")]
+position = Vector2(6100, 613)
 
 [node name="enemy3" parent="world" instance=ExtResource("5_7qsip")]
-position = Vector2(-155, 755)
+position = Vector2(3854, 582)
+
+[node name="enemy4" parent="world" instance=ExtResource("5_7qsip")]
+position = Vector2(3196, 577)
+
+[node name="enemy7" parent="world" instance=ExtResource("5_7qsip")]
+position = Vector2(6346, 599)
 
 [node name="collision" type="StaticBody2D" parent="world"]
 position = Vector2(-5, 70)
@@ -38,14 +50,23 @@ rotation = -0.0310047
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world/lvl2_entrance"]
-position = Vector2(-82.3428, 364.623)
+position = Vector2(-108.205, 230.757)
 shape = SubResource("RectangleShape2D_uvtoy")
 
 [node name="CharacterBody2D" parent="world" instance=ExtResource("3_b6pkw")]
-position = Vector2(-204, 495)
+position = Vector2(1286, 568)
+
+[node name="CharacterBody2D2" parent="world" instance=ExtResource("3_b6pkw")]
+position = Vector2(4535, 590)
+
+[node name="CharacterBody2D3" parent="world" instance=ExtResource("3_b6pkw")]
+position = Vector2(5905, 579)
 
 [node name="enemy2" parent="." instance=ExtResource("4_ptejk")]
-position = Vector2(-131, 390)
+position = Vector2(1683, 539)
+
+[node name="enemy3" parent="." instance=ExtResource("4_ptejk")]
+position = Vector2(5115, 555)
 
 [connection signal="body_entered" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_entered"]
 [connection signal="body_exited" from="world/lvl2_entrance" to="world" method="_on_lvl_2_entrance_body_exited"]
